@@ -1,10 +1,12 @@
+from random import randrange
+
 class BankAccount:
     
 
-    def __init__(self,full_name,account_number,routing_number,balance):
+    def __init__(self,full_name,):
         self.full_name = full_name
-        self.account_number = account_number
-        self.routing_number =routing_number
+        self.account_number = randrange(00000000,100000000)
+        self.routing_number =randrange(00000000,100000000)
         self.balance = 0
     
     def deposit(self,balance,amount):
@@ -32,7 +34,7 @@ class BankAccount:
         print('routing number:',Brent_BankAccount.routing_number)
         print(Brent_BankAccount.balance)
 
-Brent_BankAccount = BankAccount('Brent Shierk', 1111,1212,0)
+Brent_BankAccount = BankAccount('Brent Shierk')
 
 # Brent_BankAccount.deposit(20,0)
 # print(Brent_BankAccount.deposit(20,0))
